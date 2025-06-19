@@ -28,4 +28,4 @@ webform:
 
 launch:
   type: binary
-  command: /go/bin/katana -u {{url}} -o outputs/katana.txt
+  command: /go/bin/katana -u ${url} -o outputs/katana.txt
