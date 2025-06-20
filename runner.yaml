@@ -19,7 +19,7 @@ build:
     mkdir -p /go/src
     mkdir -p /go/bin
     cd /tmp && go install github.com/projectdiscovery/katana/cmd/katana@latest
-    echo "END: Building httpx"
+    echo "END: Building Katana"
 
 webform:
   - name: url
