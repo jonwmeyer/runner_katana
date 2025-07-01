@@ -1,6 +1,6 @@
 runner:
-  name: Katana Crawler
-  description: Crawl websites to gather information and endpoints.
+  name: Katana
+  description: Scan websites to gather information and endpoints.
   version: 0.0.1
 
 build:
@@ -8,8 +8,9 @@ build:
     echo "START: Building Katana"
     apt-get update
     apt-get install -y ca-certificates
-    apt-get install -y build-essential
-    apt-get install -y git
+    apt update
+    apt install -y build-essential ca-certificates wget unzip git
+    apt install -y python3 python3-pip python-is-python3
     wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz && rm go1.21.6.linux-amd64.tar.gz
     ENV GOROOT=/usr/local/go
     ENV GOPATH=/go
@@ -28,4 +29,4 @@ webform:
 
 launch:
   type: binary
-  command: /go/bin/katana -u ${url} -o outputs/katana.txt
+  command: python3 katana.py ${url}
