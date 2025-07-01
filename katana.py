@@ -15,8 +15,6 @@ def main():
     
     url = sys.argv[1]
 
-    #os.environ["PDCP_API_KEY"] = "" # TODO: remove this after testing       
-
     if not check_katana_installed():
         print("[!] Error: katana is not installed or not in PATH")
         print("Please install katana first: https://katana.projectdiscovery.io/katana/get-started/")
